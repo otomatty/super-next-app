@@ -1,23 +1,32 @@
 /*
-* global.css
+* globals.css
 *
-* Global styles for the entire application
+* アプリケーション全体のグローバルスタイル
+* このファイルはアプリケーション全体に適用される基本的なスタイルを定義します。
+*
+* 主な機能：
+* - Tailwind CSSのインポート
+* - 他のスタイルシートの読み込み
+* - プラグインの設定
+* - コンテンツソースの定義
+* - バリアントの定義
+* - 基本的なスタイルのリセットと設定
  */
 
 /* Tailwind CSS */
 @import 'tailwindcss';
 
-/* local styles - update the below if you add a new style */
+/* ローカルスタイル - 新しいスタイルを追加した場合は以下を更新してください */
 @import './theme.css';
 @import './theme.utilities.css';
 @import './shadcn-ui.css';
 @import './markdoc.css';
 @import './super-next-app.css';
 
-/* plugins - update the below if you add a new plugin */
+/* プラグイン - 新しいプラグインを追加した場合は以下を更新してください */
 @plugin "tailwindcss-animate";
 
-/* content sources - update the below if you add a new path */
+/* コンテンツソース - 新しいパスを追加した場合は以下を更新してください */
 @source "../../../packages/*/src/**/*.{ts,tsx}";
 @source "../../../packages/features/*/src/**/*.{ts,tsx}";
 @source "../../../packages/billing/*/src/**/*.{ts,tsx}";
@@ -25,7 +34,7 @@
 @source "../../../packages/cms/*/src/**/*.{ts,tsx}";
 @source "../{app,components,config,lib}/**/*.{ts,tsx}";
 
-/* variants - update the below if you add a new variant */
+/* バリアント - 新しいバリアントを追加した場合は以下を更新してください */
 @variant dark (&:where(.dark, .dark *));
 
 @layer base {
